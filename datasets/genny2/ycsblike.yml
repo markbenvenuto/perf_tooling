@@ -1,0 +1,54 @@
+workload_name: fle_ycsblike
+patches:
+  63e5cf7fd6d80a10530feb40:
+    linux-1-node-replSet-fle.2022-11:
+      - "ycsb_like_queryable_encrypt1_cf16"
+      - "ycsb_like_queryable_encrypt1_cf32"
+      - "ycsb_like_queryable_encrypt1_cfdefault"
+      - "ycsb_like_queryable_encrypt5_cf16"
+      - "ycsb_like_queryable_encrypt5_cf32"
+      - "ycsb_like_queryable_encrypt5_cfdefault"
+
+genny_metrics:
+  tests:
+  - "YCSBLike.load.inserts"
+  - "YCSBLike.100read.reads"
+  - "YCSBLike.95read5update.reads"
+  - "YCSBLike.95read5update.writes"
+  - "YCSBLike.50read50update.reads"
+  - "YCSBLike.50read50update.writes"
+  - "YCSBLike.100update.writes"
+  metrics:
+  - "OperationsTotal"
+  - "DocumentsTotal"
+  - "SizeTotal"
+  - "DurationTotal"
+  - "OverheadTotal"
+  - "ErrorsTotal"
+  - "AverageLatency"
+  - "AverageSize"
+  - "OperationThroughput"
+  - "DocumentThroughput"
+  - "SizeThroughput"
+  - "LatencyMin"
+  - "LatencyMax"
+  - "Latency50thPercentile"
+  - "Latency80thPercentile"
+  - "Latency90thPercentile"
+  - "Latency95thPercentile"
+  - "Latency99thPercentile"
+  - "WorkersMin"
+  - "WorkersMax"
+  - "ErrorRate"
+storage_metrics:
+  tests:
+  - "crud_actor_qe Storage Metrics"
+  metrics:
+  - "Average Growth in /data/dbs/ (bytes/s)"
+  - "End size of /data/dbs/ (bytes)"
+timing_metrics:
+  tests:
+  - "crud_actor_qe Timing Metrics"
+  metrics:
+  - "Total Duration (s)"
+curator: "/home/mark/src/genny/build/curator/curator"
