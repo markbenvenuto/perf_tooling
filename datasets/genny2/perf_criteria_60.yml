@@ -1,7 +1,7 @@
 # https://spruce.mongodb.com/version/63e6a23332f4174313ba9cf2/tasks?sorts=STATUS%3AASC%3BBASE_STATUS%3ADESC
 workload_name: perf_criteria_60
 patches:
-  63e6a23332f4174313ba9cf2:
+  63eabf977742ae6326005452:
     linux-1-node-replSet-fle.2022-11:
       - "insert_only"
       - "insert_only_unencrypted"
