@@ -29,3 +29,12 @@ OR use VS Code - https://code.visualstudio.com
 
 notebooks/es_summary_analysis.ipynb
 notebooks/es1_analysis.ipynb
+
+
+====================
+
+To generate perf criteria reports
+
+sh ./postprocess.sh genny_stats perf_criteria_60.yml > perf_criteria_60.csv
+sh ./postprocess.sh genny_stats perf_criteria_70.yml > perf_criteria_70.csv
+
