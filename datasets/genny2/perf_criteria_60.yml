@@ -1,7 +1,7 @@
 # https://spruce.mongodb.com/version/63e6a23332f4174313ba9cf2/tasks?sorts=STATUS%3AASC%3BBASE_STATUS%3ADESC
 workload_name: perf_criteria_60
 patches:
-  63f78a470305b937fcbe9fda:
+  63fd86001e2d172b6c537ce4:
     linux-1-node-replSet-fle.2022-11:
       - "medical_workload_credit_cards_100_0"
       - "medical_workload_credit_cards_100_0_unencrypted"
