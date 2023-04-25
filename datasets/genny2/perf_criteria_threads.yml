@@ -1,0 +1,65 @@
+# https://spruce.mongodb.com/version/641491dd850e618884ae90a9/tasks?sorts=STATUS%3AASC%3BBASE_STATUS%3ADESC
+workload_name: perf_criteria_threads
+patches:
+  641491dd850e618884ae90a9:
+    linux-shard-lite-fle.2022-11:
+      - "medical_workload_credit_cards_50_50_t16"
+      - "medical_workload_credit_cards_50_50_t16_unencrypted"
+      - "medical_workload_credit_cards_50_50_t32"
+      - "medical_workload_credit_cards_50_50_t32_unencrypted"
+      - "medical_workload_credit_cards_50_50_t8"
+      - "medical_workload_credit_cards_50_50_t8_unencrypted"
+      - "medical_workload_guid_50_50_t16"
+      - "medical_workload_guid_50_50_t16_unencrypted"
+      - "medical_workload_guid_50_50_t32"
+      - "medical_workload_guid_50_50_t32_unencrypted"
+      - "medical_workload_guid_50_50_t8"
+      - "medical_workload_guid_50_50_t8_unencrypted"
+      #- "medical_workload_load"
+      - "medical_workload_load_t16"
+      - "medical_workload_load_t16_unencrypted"
+      - "medical_workload_load_t32"
+      - "medical_workload_load_t32_unencrypted"
+      - "medical_workload_load_t8"
+      - "medical_workload_load_t8_unencrypted"
+      #- "medical_workload_load_unencrypted"
+genny_metrics:
+  tests:
+  - "InsertActor.load.inserts"
+  - "InsertActor.Crud"
+  - "InsertActor.FSM.query"
+  - "InsertActor.FSM.update"
+  metrics:
+  - "OperationsTotal"
+  - "DocumentsTotal"
+  - "SizeTotal"
+  - "DurationTotal"
+  - "OverheadTotal"
+  - "ErrorsTotal"
+  - "AverageLatency"
+  - "AverageSize"
+  - "OperationThroughput"
+  - "DocumentThroughput"
+  - "SizeThroughput"
+  - "LatencyMin"
+  - "LatencyMax"
+  - "Latency50thPercentile"
+  - "Latency80thPercentile"
+  - "Latency90thPercentile"
+  - "Latency95thPercentile"
+  - "Latency99thPercentile"
+  - "WorkersMin"
+  - "WorkersMax"
+  - "ErrorRate"
+storage_metrics:
+  tests:
+  - "crud_actor_qe Storage Metrics"
+  metrics:
+  - "Average Growth in /data/dbs/ (bytes/s)"
+  - "End size of /data/dbs/ (bytes)"
+timing_metrics:
+  tests:
+  - "crud_actor_qe Timing Metrics"
+  metrics:
+  - "Total Duration (s)"
+curator: "/home/mark/src/genny/build/curator/curator"
