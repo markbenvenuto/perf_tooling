@@ -38,3 +38,9 @@ To generate perf criteria reports
 sh ./postprocess.sh genny_stats perf_criteria_60.yml > perf_criteria_60.csv
 sh ./postprocess.sh genny_stats perf_criteria_70.yml > perf_criteria_70.csv
 
+sh ./postprocess.sh genny_stats perf_criteria_60_unencrypted.yml > perf_criteria_60_unencrypted.csv
+sh ./postprocess.sh genny_stats perf_criteria_70_unencrypted.yml > perf_criteria_70_unencrypted.csv
+
+sh ./postprocess.sh genny_stats perf_criteria_threads.yml > perf_criteria_threads.csv
+
+sh ./postprocess.sh genny_stats perf_criteria_60_fixed.yml > perf_criteria_60_fixed.csv
